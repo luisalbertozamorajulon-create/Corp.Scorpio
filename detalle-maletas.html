@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle - Maletas Laterales | Corp Scorp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;600&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Mismo estilo que arriba, ajustado para maletas */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            color: #333;
+            line-height: 1.8;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+        }
+        header p {
+            font-size: 1.3em;
+            margin: 10px 0;
+            font-family: 'Dancing Script', cursive;
+        }
+        .slider-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 50px auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .slider {
+            display: flex;
+            width: 300%;
+            animation: slide 30s infinite;
+        }
+        .slide {
+            width: 33.33%;
+            position: relative;
+        }
+        .slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            animation: moveLeft 1s ease-out;
+        }
+        @keyframes moveLeft {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            10% { transform: translateX(0); }
+            33.33% { transform: translateX(-33.33%); }
+            43.33% { transform: translateX(-33.33%); }
+            66.66% { transform: translateX(-66.66%); }
+            76.66% { transform: translateX(-66.66%); }
+            100% { transform: translateX(0); }
+        }
+        .slide .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+            color: #fff;
+            padding: 40px;
+            text-align: left;
+            border-radius: 0 0 15px 15px;
+        }
+        .slide h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5em;
+            margin: 0 0 15px 0;
+        }
+        .slide p {
+            font-size: 1.1em;
+            margin: 0 0 10px 0;
+        }
+        .slide .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+            color: #ccc;
+        }
+        .indicadores {
+            text-align: center;
+            margin: 50px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .indicadores button {
+            background: linear-gradient(135deg, #333 0%, #555 100%);
+            color: #fff;
+            border: none;
+            padding: 18px 35px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            margin: 10px;
+        }
+        .indicadores button:hover {
+            background: linear-gradient(135deg, #555 0%, #777 100%);
+            transform: scale(1.08);
+        }
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+        }
+        @media (max-width: 768px) {
+            .slide img { height: 300px; }
+            .slide h2 { font-size: 2em; }
+            .overlay { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Corp Scorp</h1>
+        <p>Especialistas en Carrocerías para Motos Cardán en Perú</p>
+    </header>
+    
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maletas Cerradas">
+                <div class="overlay">
+                    <h2><i class="icon fas fa-lock"></i>Maletas Laterales</h2>
+                    <p>Equipaje seguro con cierre hermético. Capacidad: 30L cada una. Resisten agua, polvo y vibraciones en caminos peruanos.</p>
+                    <p>Material: Plástico ABS reforzado. Correas ajustables para fijación perfecta. Disponibles en pares.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="En Uso">
+                <div class="overlay">
+                    <h2><i class="icon fas fa-road"></i>Para Aventuras</h2>
+                    <p>Ideales para viajes a la sierra o selva. Espacio para ropa, herramientas y comida. Fácil instalación sin herramientas especiales.</p>
+                    <p>Beneficios: Ligereza, durabilidad y compatibilidad con motos cardán. Reduce el riesgo de pérdida de equipaje.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Abiertas">
+                <div class="overlay">
+                    <h2><i class="icon fas fa-box-open"></i>Espacio Interior</h2>
+                    <p>Amplio interior con compartimentos. Colores: Negro o gris. Garantía de 1 año contra roturas.</p>
+                    <p>Precio: S/ 800. Envío incluido. ¿Listo para tu próxima aventura? ¡Compra ahora y viaja con confianza!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="indicadores">
+        <a href="index.html"><button><i class="fas fa-arrow-left"></i> Volver a Productos</button></a>
+        <button><i class="fas fa-shopping-cart"></i> Comprar Ahora - S/ 800</button>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Corp Scorp. Todos los derechos reservados. | Potencia tu Aventura</p>
+    </footer>
+</body>
+</html>
